@@ -217,7 +217,8 @@
             "function": callFunction,
             "args": callArgs
         }
-
+		console.log("from:"+from);
+		console.log("address:"+dappAddress);
         neb.api.call(from,dappAddress,value,nonce,gas_price,gas_limit,contract).then(function (resp) {
             cbSearch(resp)
         }).catch(function (err) {
